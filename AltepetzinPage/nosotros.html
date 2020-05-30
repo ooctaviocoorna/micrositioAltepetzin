@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Altepetzin</title>
+    <link rel="icon" href="img/logos/logoPagina.ico">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script>
+      function iniciarMap(){
+      var coord = {lat:21.1560012 ,lng: -100.9241969};
+      var map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 10,
+      center: coord
+      });
+      var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+      });
+      }
+  </script>
+  </head>
+  <body>
+    <!--Encabezado y Navbar-->
+    <div class="navbar-fixed">
+      <nav class="lime">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo">
+            <img src="img/logos/logoPagina.png">
+          </a>
+          <a href="#" data-target="menu-responsive" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <!--Menú para PC-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="index.html" class="dropdown-trigger" data-target="id_drop">
+                Inicio
+                <i class="material-icons right">arrow_drop_down</i>
+              </a>
+            </li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li class="active"><a href="nosotros.html">¿Qiénes somos?</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+          <!--Submenu de INICIO-->
+          <ul id="id_drop" class="dropdown-content">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+          </ul>
+          <!--Menú para moviles-->
+          <ul class="sidenav" id="menu-responsive">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li  class="active"><a href="nosotros.html">¿Qiénes somos?</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--Pantalla ¿Quienes somos?-->
+    <div class="section container">
+      <div class="row">
+        <div class="col s12" id="colap">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">person</i>
+                Propietario
+              </div>
+              <div class="collapsible-body">
+                  <div class="card horizontal">
+                    <div class="card-image">
+                      <img src="img/nosotros/yo.jpg" alt="">
+                    </div>
+                    <div class="card-content justify">
+                      <span class="card-title center"><b>Jesús Octavio García Corona</b></span>
+                      <p class="justify">Estudiante de la Ingeniería en Tecnologías de la Información y Comunicación 
+                        en la Universidad Tecnológica del Norte de Guanajuato.
+                        Nació en la ciudad de Guanajuato capital y actualmente radica en la ciudad de 
+                        Dolores Hidalgo Cuna de la Independencia Nacional.
+                      </p>
+                    </div>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">flag</i>
+                Objetivo de la empresa
+              </div>
+              <div class="collapsible-body">
+                <span>
+                  Ofrecer al cliente el mejor servicio de viajes en el país, ofertando paquetes turísticos a los principales pueblos mágicos de la nación.
+                  Con la seguridad de conocer los lugrares más representativos de cada rincon de México, y la comodidad de sólo preocuparse por hacer su maleta
+                  y disfrutar del conocimiento y descanso que ofrece <b>Altepetzin Traveling</b>.
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">account_circle</i>
+                Contacto
+              </div>
+              <div class="collapsible-body">
+                <span>
+                  <p><i class="material-icons left">call</i>    +52 418 177 9808</p>
+                </span>
+              </div>
+              <div class="collapsible-body">
+                <p><i class="material-icons left">email</i>     jesusoctaviogarciacorona@gmail.com</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">place</i>
+                Ubicación
+              </div>
+              <div class="collapsible-body">
+                <p><i class="material-icons left">pin_drop</i>Calle Allende #34, Zona Centro, Dolores Hidalgo Cuna de la Independencia Nacional, Guanajuato, México</p>
+                <div id="map" style="height: 500px; width: 100%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        var elems = document.querySelectorAll('.slider');
+        var instances = M.Slider.init(elems,{
+          height:600,
+          interval:3000
+        })
+        M.AutoInit();
+      });
+    </script>
+  </body>
+  <footer class="page-footer lime">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Altepetzin Traveling</h5>
+          <p class="grey-text text-lighten-4 justify">
+            Viaja por todo México con la seguridad de empaparte de la hostoria y cultura nacional, de la mando de una empresa sumamente responsable y comprometida a ofrecerte el mejor servicio.
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Redes Sociales</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.facebook.com/jogc03">
+                Facebook
+                <i class="material-icons left">link</i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.instagram.com/ooctaviocorona">
+                Instagram
+                <i class="material-icons left">link</i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">
+                Google+
+                <i class="material-icons left">link</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Derechos reservados.
+      </div>
+    </div>
+  </footer>
+</html>

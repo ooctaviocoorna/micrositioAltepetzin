@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Altepetzin</title>
+    <link rel="icon" href="img/logos/logoPagina.ico">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body>
+    <!--Encabezado y Navbar-->
+    <div class="navbar-fixed">
+      <nav class="lime">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo">
+            <img src="img/logos/logoPagina.png">
+          </a>
+          <a href="#" data-target="menu-responsive" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <!--Menú para PC-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="index.html" class="dropdown-trigger" data-target="id_drop">
+                Inicio
+                <i class="material-icons right">arrow_drop_down</i>
+              </a>
+            </li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="nosotros.html">¿Qiénes somos?</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+          <!--Submenu de INICIO-->
+          <ul id="id_drop" class="dropdown-content">
+            <li><a href="index.html">Inicio</a></li>
+            <li  class="active"><a href="servicios.html">Servicios</a></li>
+          </ul>
+          <!--Menú para moviles-->
+          <ul class="sidenav" id="menu-responsive">
+            <li><a href="index.html">Inicio</a></li>
+            <li  class="active"><a href="servicios.html">Servicios</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="nosotros.html">¿Qiénes somos?</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--Pantalla Contactanos-->
+    <div class="row">
+      <section>
+        
+      </section>
+    </div>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        var elems = document.querySelectorAll('.slider');
+        var instances = M.Slider.init(elems,{
+          height:600,
+          interval:3000
+        })
+        M.AutoInit();
+      });
+    </script>
+  </body>
+  <footer class="page-footer lime">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Altepetzin Traveling</h5>
+          <p class="grey-text text-lighten-4 justify">
+            Viaja por todo México con la seguridad de empaparte de la hostoria y cultura nacional, de la mando de una empresa sumamente responsable y comprometida a ofrecerte el mejor servicio.
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Redes Sociales</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.facebook.com/jogc03">
+                Facebook
+                <i class="material-icons left">link</i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.instagram.com/ooctaviocorona">
+                Instagram
+                <i class="material-icons left">link</i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">
+                Google+
+                <i class="material-icons left">link</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Derechos reservados.
+      </div>
+    </div>
+  </footer>
+</html>
